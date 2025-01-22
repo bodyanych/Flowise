@@ -6,7 +6,7 @@ services:
         restart: always
         environment:
             - PORT=${PORT:3000}
-            - FLOWISE_USERNAME=${FLOWISE_USERNAME:=star}
+            - FLOWISE_USERNAME=${FLOWISE_USERNAME:-star}
             - FLOWISE_PASSWORD=${FLOWISE_PASSWORD:-password}
             - FLOWISE_SECRETKEY_OVERWRITE=${FLOWISE_SECRETKEY_OVERWRITE:-myencryptionkey}
         ports:
